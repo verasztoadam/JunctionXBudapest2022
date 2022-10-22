@@ -23,16 +23,16 @@ coupon_spent = 0
 
 # Iterrate throw rows
 for i, row in df.iterrows():
-    print(f"> Progress index: {i}")
+    #print(f"> Progress index: {i}")
     monthly_checkouts_cnt += df['checkout_count'][i]
     coupon_checkouts_cnt += df['coupon_count'][i]
     monthly_spent += df['spent'][i]
     coupon_spent += df['coupon_spent'][i]
 
-    if(dt_list[i].month != prev_month):
+    if(dt_list[i].month != prev_month) and i > 1:
         prev_month = dt_list[i].month
         df_monthly_checkouts.loc[len(df_monthly_checkouts.index)] = [
-            datetime(year=dt_list[i].year, month=dt_list[i].month, day=1),
+            datetime(year=dt_list[i-1].year, month=dt_list[i-1].month, day=1),
             monthly_checkouts_cnt,
             coupon_checkouts_cnt,
             monthly_spent,
