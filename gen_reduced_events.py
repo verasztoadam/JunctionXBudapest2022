@@ -1,7 +1,7 @@
 import pandas as pd
 
-CUSTOMER_START_INDEX = 0
-CUSTOMER_END_INDEX = 10000
+CUSTOMER_START_INDEX = 300000
+CUSTOMER_END_INDEX = 400000
 
 df = pd.read_csv("./data/gen/events.csv")
 df['customer'] = df['customer'].astype(str)
