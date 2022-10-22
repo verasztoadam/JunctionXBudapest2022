@@ -1,6 +1,6 @@
 import pandas as pd
 
-UTILITY_NAMES = ["unix_timestamp", "customer", "action", "points", "properties.total", "properties.points_burned",
+UTILITY_NAMES = ["unix_timestamp", "date", "customer", "action", "points", "properties.total", "properties.points_burned",
                  "properties.currency", "properties.discount", "properties.shipping", "properties.gift_card",
                  "properties.gift_card_amount", "properties.coupon_code", "used_points", "properties.reward",
                  "properties.level", "properties.purchase_total", "properties.activity", "properties.points"]
